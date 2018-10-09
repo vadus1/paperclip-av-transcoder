@@ -53,12 +53,6 @@ module Paperclip
         @cli.add_destination(dst.path)
         @cli.reset_input_filters
 
-        if output_is_image?
-          @time = @time.call(@meta, @options) if @time.respond_to?(:call)
-          @cli.filter_seek @time
-          @cli.filter_rotate @meta[:rotate] if @auto_rotate && !@meta[:rotate].nil?
-        end
-
         if @convert_options.present?
           if @convert_options[:input]
             @convert_options[:input].each do |h|
