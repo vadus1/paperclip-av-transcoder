@@ -26,5 +26,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "coveralls"
 
   spec.add_dependency "paperclip", ">=2.5.2"
-  spec.add_dependency "av", "~> 0.9.0", git: 'https://github.com/vadus1/av.git'
+  spec.add_dependency "av", "~> 0.9.0", git: 'https://github.com/vadus1/av'
 end
